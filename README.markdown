@@ -11,17 +11,17 @@ Gothic.js is a small and simple library for modeling and managing finite state m
 Usage
 -----
 
-`var model = {};
+`var model = {};`
 
-`var fsm = Gothic.create(model)
-  .define("isInitializing")
-    .is(GOTHIC.INITIAL)
-    .when("initialized", "isReady")
-  .define("isReady")
-    .when("powerOff", "isPoweredDown")
-  .define("isPoweredDown")
-    .when("powerOn", "isInitializing")
-.end();`
+`var fsm = Gothic.create(model)`
+`  .define("isInitializing")`
+`    .is(GOTHIC.INITIAL)`
+`    .when("initialized", "isReady")`
+`  .define("isReady")`
+`    .when("powerOff", "isPoweredDown")`
+`  .define("isPoweredDown")`
+`    .when("powerOn", "isInitializing")`
+`.end();`
 
 
 To control the FSM:
