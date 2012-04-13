@@ -1,0 +1,27 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/1.2.1/knockout-min.js"></script>
+<script src="Gothic.js"></script>
+<script src="VendingMachineKOExample.js"></script>
+
+
+<script>
+
+
+
+</script>
+</head>
+<body>
+	<h3>Coins: <strong data-bind="text:coins">.</strong></h3>
+	<table>
+	<tr><td><a href="javascript:vm.call('sodaChoice',['regular']);">Regular</a>:	</td><td><strong data-bind="text:sodas().regular()">.</strong></td></tr>
+	<tr><td><a href="javascript:vm.call('sodaChoice',['diet']);">Diet</a>:		</td><td><strong data-bind="text:sodas().diet()">.</strong></td></tr>
+	<tr><td><a href="javascript:vm.call('sodaChoice',['water']);">Water</a>:		</td><td><strong data-bind="text:sodas().water()">.</strong></td></tr>
+	</table>
+	
+	<a href="javascript:vm.do('addCoin');">Add Coin</a><br/>
+	<a href="javascript:vm.do('refund');">Refund</a><br/>
+	<a href="javascript:vm.do('choose');">Choose</a> (<span data-bind="text:sodaChoice()"></span>)
+</body>
+</html>
